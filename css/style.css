@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:500|Poppins:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Guntur:500|Hind+Madurai:500|M+PLUS+1p|Montserrat:500|Noto+Sans+JP:300|Questrial&display=swap');
+
+/* all pages */
+
+/*font-family: 'Poppins', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;*/
+
+body {
+    font-family: 'Helvetica Neue';
+    /*font-family: 'Montserrat', sans-serif;*/
+    /*font-family: 'Noto Sans JP', sans-serif;*/
+    /*font-family: 'Questrial', sans-serif;*/
+    /*font-family: 'Hind Madurai', sans-serif;*/
+    /*font-family: 'Didact Gothic', sans-serif;*/
+    /*font-family: 'Hind Guntur', sans-serif; alright*/
+    /*font-family: 'M PLUS 1p', sans-serif; alright*/
+    /*background-color: #000;*/
+}
+
+/* nav bar styling */
+.nav-link {
+    display: inline-block;
+    float: right;
+    /*font-family: 'Questrial', sans-serif;*/
+    /*font-family: 'Helvetica Neue';*/
+}
+
+.nav-item a{
+    display: inline-block;
+    text-align: center;
+}
+
+.nav-item a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+
+/*color of links on hover & active, spacing between links and above*/
+
+/* footer */
+footer p {
+    font-size: 80%;
+}
+
+
+
+/* home / about*/
+/*.home-content {
+    font-size: 150%;
+}
+*/
+.padding-top {
+    padding-top: 8%;
+}
+
+.padding-bottom {
+    padding-bottom: 8%;
+}
+
+#text-super-big {
+    font-size: 750%;
+}
+
+#text-big {
+    padding-top: 5%;
+    font-size: 200%;
+}
+
+#text-med-big {
+    font-size: 150%;
+}
+
+#text-med {
+    font-size: 125%;
+}
+
+.switch-colors {
+    /*background-color: #242424;*/
+    background-color: #080808;
+    color: #F8F8F8;
+    /*padding-top: -%;*/
+}
+
+.home-links a{
+    color: #f8f8f8;
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+}
+
+.home-links a:hover{
+    color: #f8f8f8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* contact */
+.contact a{
+    color: #fff;
+    /*color: yellow;*/
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.contact a:hover{
+    color: #080808;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.contact h3 {
+    font-size: 275%;
+}
+
+.contact-pt1 {
+    font-size: 180%;
+}
+
+.contact h4 {
+    font-size: 200%;
+}
+
+
+
+
+
+
+
+
+
