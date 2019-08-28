@@ -7,7 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/project-style.css" rel="stylesheet">
+
+    <link rel="icon" href="../img/sun.png">
 
     <title>shannon lu</title>
   </head>
@@ -45,7 +47,128 @@
 
     <div class="container">
       <br><br>
-      <h1>academic development</h1>
+      <h1>Academic Coaching Reporting System</h1>
+
+      <div class="row">
+        <div class="col-8">
+          <p><i>
+          An implementation of an automated reporting dashboard to visualize pre- and post- assessment data from academic coaching sessions</i></p>
+        </div>
+      </div>
+
+      <hr><br>
+
+
+      <div class="row background-col">
+        <div class="col-3">
+          <p>
+            <b class="small-heading">SYSTEM</b> <br>
+            Google Suite <br><br>
+            <b class="small-heading">TERM</b> <br>
+            Spring 2019 <br><br>
+            <b class="small-heading">MENTORS</b> <br> 
+            Michael P., TC Eley
+          </p>
+        </div>
+
+        <div class="col-1">
+        </div>
+
+        <div class="col-8">
+          <p>
+              <b class="small-heading">Project Description </b><br>
+              Up until a few years ago, Carnegie Mellon University’s Academic Development program used a paper system to keep track of Academic Coaching sessions, feedback, and assessments. <br><br>
+              One sheet for every [session] - filled out and filed away, never to be looked at again. [a waste of an opportunity, not to mention it’s not the most environmentally friendly practice. a hazard to the environment] <br><br>
+              Since then, the department has digitized their data collection processes by creating a Google Form and Sheet system to keep track of student responses. My task was to help figure out how to turn the recorded data into something actionable and insightful - something that could drive decision making to improve the program. <br>
+          </p>
+        </div>
+      </div>
+
+      <br><hr><br>
+
+
+      <div class="row container">
+          <div class="col-2">
+          </div>
+
+          <div class="col-8">
+            <p>
+              <b class="small-heading">A little background</b>
+              <br> 
+              Academic Coaching is a program that helps students acquire more effective and efficient study skills. Student Academic Coaches conduct workshops and individualized sessions to help other students focus on skills such as time management, avoiding procrastination, forming productive habits, preparing for exams, taking lecture notes, and more. 
+              <br><br>
+              When students join the program, they are asked to fill out a [# of questions] survey on their study habits and attitudes toward academic achievement. The survey is based on the Motivated Strategies for Learning Questionnaire (MSLQ) publication and covers topics such as mindset, belongingness, self-efficacy, and types of study skills. At the end of their sessions, usually at the end of the semester, the same survey is completed.
+              <br><br>
+              At the time, the data from pre- and post- assessments was not being utilized in any way. However, we (I along with the Department Leads) recognized the potential to leverage the information to measure the effectiveness of the Academic Coaching program – both holistically and for individual students. We decided to create a system to visualize the assessment results and integrate it within the reporting dashboard for each student.
+            </p>
+            <br>
+
+            <p>
+              <b class="small-heading">Visualizing results</b>
+              <br> 
+              The initial phase of this project involved researching and understanding the problem space. Using the publications [], I familiarized myself with what the assessment measures as well as how these attributes relate and interact with each other, and what factors contribute most to academic success.
+              <br><br> 
+              Sample questions from the pre- and post- assessment:
+              Mindset
+              Belongingness
+              Self-efficacy
+              Study Skills
+              <br><br> 
+              The next step was figuring out how to measure the response levels. The questions from the survey asked respondents to indicate their answers on a Likert scale [from 1 – 7, with 1 representing ‘Strongly Disagree’ and 7 representing ‘Strongly Agree’].
+              <br><br> 
+              We decided to take an average of the Likert scale responses for each category because it would give us an understandable estimate of where individuals are at first glance. We were originally hesitant to take this approach, since it assumes each categorical statement [is weighted equally / same degree of separation / same importance ?]. However, we made this decision because we prioritized the ease of understanding for the coaches and [it serves the purpose for the reporting dashboard - to provide a glimpse of where students stand regarding academic habits in one centralized place]. 
+              <br><br> 
+              For the most part greater response values (agreeing with the statement) corresponded to more feeling of belonging, more self-efficacy, better study skills, and a growth mindset. However, because of how some statements were worded, they required a transformation of the response before taking the average to accurately measure the category. Using the [research studies] we went through [the # of statements] to determine whether this process would be required for the statement. 
+              <br><br> 
+              [example] 
+              <br><br> 
+              After deciding how the responses would be quantified, we worked on visualizing the measures. For the categories Mindset, Belongingness, and Self-efficacy, there was only one value that encompasses where individuals lie in that aspect, so we used a [one-dimensional] scale to visually respresent it.  
+              <br><br> 
+              [insert graph]
+              Show that greater values 
+              No longer have access to the systems so please accept a hand-drawn depiction ~
+              <br><br> 
+
+              For the Study Skills category, there were different types of study skills being measured, so we categorized the statements based on the MSLQ report and showed values for each type of skill. 
+              <br><br> 
+              [insert graph]
+              <br><br> 
+              When designing the structure of the dashboard, we took into account the [importance] and [how common / how often it would be used ?] of each category. The primary goal of the visualization is to allow Academic Coaches to get a holistic baseline understanding of where the student is at regarding academic skills and attitude, which allows them to create more individualized plans of what to tailor sessions to. The organization of the information was designed in a way that features the most important categories and the most frequently used ones [most useful]. 
+              <br><br> 
+              [graph drawn up]
+              <br><br> 
+              Based on these importances, we decided the structure to look like this:
+              In addition to providing background information on the categories
+              <br><br> 
+              [dashboard drawing]
+            </p>
+            <br>
+
+            <p>
+              <b class="small-heading">Results & future action</b>
+              <br> 
+              Through the addition of the visualizations of the pre- and post- assessments in the reporting dashboard, both Academic Coaches and students in the program can gain an understanding of the impact of the coaching sessions. Looking solely at the pre- assessment results, coaches can prepare sessions based on the individual’s needs and areas for potential growth. Comparing pre- and post- assessment visualizations also allows [the department to understand trends across all students in the program] and identify which areas students are improving the most and which should be focused on more.
+              <br><br>
+              [Overall,] this project allowed me to experience first-hand a [complete] digital transformation and help create something tangible that would allow data to push forward the operations of an organization by measuring results and identifying areas for improvement. [I witnessed the lingering effects of the inefficiency of a paper system, and saw how much more efficient and impactful a digital process is].  
+              <br><br>
+              [However one semester is only so long, and if I had the time to continue the next steps would be to perform more analyses on the program as a whole. Adding averages of measures across the total population of students in the program would allow individual students to see their performance compared against others’]. 
+            </p>
+
+          </div>
+
+          <div class="col-2">
+          </div>
+      </div>
+
+      <br><br><br><br><br><br>
+      <footer>
+        <div class="row">
+          <div class="col-10"></div>
+          <div class="col-2">
+            <p>&copy shannon lu 2019</p>
+          </div>
+        </div>
+      </footer>
       
     </div>
 

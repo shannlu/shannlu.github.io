@@ -7,7 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/project-style.css" rel="stylesheet">
+
+    <link rel="icon" href="../img/sun.png">
 
     <title>shannon lu</title>
   </head>
@@ -45,7 +47,111 @@
 
     <div class="container">
       <br><br>
-      <h1>a & m chess camps </h1>
+      <h1>A&M Chess Camp Registration Site</h1>
+
+      <div class="row">
+        <div class="col-8">
+          <p><i>
+          A fully-functioning chess camp registration site, featuring different use cases for roles such as parents, instructors, and guests. Allows users to create accounts, browse camps, register students for camp, and check out, among other features </i></p>
+        </div>
+      </div>
+
+      <hr><br>
+
+
+      <div class="row background-col">
+        <div class="col-3">
+          <p>
+            <b class="small-heading">LANGUANGE / SYSTEM</b> <br>
+            Ruby, Rails, HTML, CSS, JavaScript, SQLite <br><br>
+            <b class="small-heading">TERM</b> <br>
+            Spring 2018 <br><br>
+          </p>
+        </div>
+
+        <div class="col-1">
+        </div>
+
+        <div class="col-8">
+          <p>
+              <b class="small-heading">The task - </b><br>
+              To create a fully-functioning chess camp registration site from scratch - taking into account necessary functions for different roles, an intuitive user experience, and a live database. 
+              <br><br>
+              The process involved understanding all application requirements, designing and building out the database, developing the application using an MVC model, and user testing to ensure that all functionality worked as expected. 
+              <br><br>
+              purpose to learn the software development process for web applications
+          </p>
+        </div>
+      </div>
+
+      <hr><br>
+
+
+      <div class="row container">
+          <div class="col-2">
+          </div>
+
+          <div class="col-8">
+            <p>
+              <b class="small-heading">Understanding application requirements & creating the database -</b>
+              <br> 
+              In order to begin, I first had to understand what the registration site would be used for and how it should function. At a high level, all users would be able to browse different chess camps offered, curriculums for the camps, locations the camps were held at, and instructors. Parents would be able to create an account and log in, add students to their family, select camps to register for, and check out. Instructors would be able to modify curriculum and course information, while guests would only be able to view public information. A detailed list of use cases for different types of users can be found here. 
+              <br><br>
+              From the use cases, I had to determine what pieces of information were necessary to keep track of and how the pieces related to each other. Throughout the process of doing so, I created an entity-relationship diagram to represent the database structure.
+              <br><br>
+              ERD
+              <br><br>
+              Additional documentation: database design in third normal form & data dictionary
+              <br><br>
+              Having a comprehensive understanding of what information was stored in the database and how the information was organized played an integral part in building the rest of the application because it ensured that the correct information could be accessed efficiently. 
+            </p>
+            <br>
+
+            <p>
+              <b class="small-heading">Developing the application -</b>
+              <br> 
+             Using a Model-View-Controller (MVC) framework, I built the application using Ruby on Rails in phases that corresponded to these separate parts. 
+             <br><br>
+            [diagram this maybe]
+            First, on the backend, the database entities were built out as models, with a full suite of unit tests to make sure that the data stored within each model was accurate and feasible (ie. phone numbers could only be 10 digits). 
+            <br><br>
+            Then, some basic views were created to display information about the models - the pages that allow users to browse different camps, locations, instructors, and curriculums. Utilizing HTML, CSS, and Materialize, basic styling was included to appropriately visualize the information. 
+            <br><br>
+            Afterwards, basic controller functionality was implemented, including the CRUD (create, read, update, delete) operations for all the entities. This allowed the users to update information about a model in the database. 
+            <br><br>
+            After functionality for viewing and editing camps, curriculums, locations, and instructors were completed, the rest of the models (users, registrations, students, camp instructors) were created. 
+            <br><br>
+            Following a similar process as before, the views and controllers for the new models were implemented. This included creating the process for more complex tasks - such as making an account, logging in, registering a student for a camp, making a payment / checking out, and assigning instructors to different camps. 
+            <br><br>
+            Once all user functions were feasible, I added authorization for different types of accounts. Admin accounts were able to view and edit information on all pages, instructor accounts could only change information for camps and curriculums they were assigned to, and parent accounts could only view information.
+            <br><br>
+            Lastly, user testing was conducted to make the end-to-end process as intuitive as possible. Changes to the structure and interactions were made based on user feedback. 
+            </p>
+            <br>
+
+            <p>
+              <b class="small-heading">Final solution -</b>
+              <br> 
+              Some screenshots of the final product are shown below, and the complete GitHub repository for this project can be found here. 
+            </p>
+            <br>
+
+
+          </div>
+
+          <div class="col-2">
+          </div>
+      </div>
+
+      <br><br><br><br><br><br>
+      <footer>
+        <div class="row">
+          <div class="col-10"></div>
+          <div class="col-2">
+            <p>&copy shannon lu 2019</p>
+          </div>
+        </div>
+      </footer>
       
     </div>
 
