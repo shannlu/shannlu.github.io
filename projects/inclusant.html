@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../css/project-style.css" rel="stylesheet">
 
-    <link rel="icon" href="../img/sun.png">
+    <link rel="icon" href="../img/logo.png">
 
     <title>shannon lu</title>
   </head>
@@ -18,8 +18,8 @@
     <div class="container-fluid">
       <nav class="navbar navbar-light navbar-expand-md">
         <div class="navbar-header">
-          <!-- <a class="navbar-brand" href="index.html"><img src = "#" width = "40" height = "auto"></a> -->
-          <a class="navbar-brand" href="../index.html">shannon lu</a>
+          <a class="navbar-brand" href="index.html"><img src = "../img/logo.png" width = "45" height = "auto"></a>
+          <!-- <a class="navbar-brand" href="../index.html">shannon lu</a> -->
         </div>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -76,11 +76,12 @@
 
         <div class="col-8">
           <p>
-              <b class="small-heading">Introduction </b><br>
-              TEXT
+            <b class="small-heading">Community Partner Background </b><br>
+              Inclusant (LINK) is a data-driven, fact-based, diversity and inclusion consulting firm located in Pittsburgh, Pennsylvania. Through quality, personalized training for non-profits and workshops / conferences for diversity leaders in the area, Inclusant enables organizations to <i>expand diversity and promote inclusion</i>.
+
             <br><br>
-              <b class="small-heading">Research Questions </b><br>
-              TEXT
+            <b class="small-heading">Project Opportunity </b><br>
+              How can Inclusant's client onboarding process be improved to allow for better allocation of resources to enhance the organizational mission? 
 
           </p>
         </div>
@@ -95,9 +96,78 @@
 
           <div class="col-8">
             <p>
-              <b class="small-heading">Heading</b>
+              Our main priority was to address the project opportunity by developing and implementing a technological solution that would fulfill Inclusant’s needs, build capacity for the organization, and be sustainable for the future. In order to do so, we first needed to understand how the organization operates, conducts its client onboarding process, and manages its information within the existing technological infrastructure.
+            </p>
+            <br>
+
+            <p>
+              <b class="small-heading">Organizational Structure & Operations</b>
               <br> 
-             text
+              Inclusant is a relatively small organization, with most of its operations handled by the primary consultant. To help with running programs and providing trainings, Inclusant relies on a network of subcontractor consultants who are also diversity and inclusion specialists. The organization has a limited technological infrastructure, so processes are manually handled.  
+              <br><br>
+
+              <u>Original process for intaking a new client:</u><br>
+              Potential client reaches out to Inclusant through contact form on website or referral from previous clients
+              Back and forth exchange (through email) to understand client’s needs
+              Inclusant handles training or reaches out to subcontractor consultant to handle training based on client’s needs
+              Handling training → set up time, location, duration, number of sessions, etc.
+
+              <br><br> diagram maybe?<br>
+              This process can be both time and labor intensive because of the inefficient back and forth exchanges. The amount of time and effort spent towards this initial process directly impacts the capacity of the organization to take on more clients and lead more trainings. <br>
+            </p>
+            <br><br>
+
+            <p>
+              <b class="small-heading">Project Outcomes</b>
+              <br> 
+              Our goal was to streamline the matching process between potential client organizations and subcontractor consultants in Inclusant’s network, in order to allow for more time to be spent working with clients and providing trainings. In order to do so, our solution encompassed 2 parts:
+              <br>
+              <ol>
+                <li>Designing and creating a diagnostic questionnaire for potential clients to share more specifically what they are looking for through working with Inclusant</li>
+                <li>Improving the overall information architecture and user experience of the current website</li>
+              </ol>
+              <br>
+
+              <u>Diagnostic Process Questionnaire</u><br>
+              The diagnostic process questionnaire we created most directly allowed us to address our project goal - to make the matching process of potential client to subcontractor consultant more efficient. In our Competitive Analysis, we researched different diversity & inclusion consulting sites and took note of how other firms organized their information, as well as where they placed their call to action button to schedule a consultation and how that process worked. 
+
+              <br><br> Competitive analysis link or screenshots ??<br><br>
+
+              In addition, we used Inclusant’s previous Client Intake Form as inspiration and brainstormed questions and other pieces of information that would be useful to Inclusant in fitting a subcontractor consultant to potential clients’ needs. Working closely with our community partner, we improved the content and wording to ensure that the resulting form would allow Incluant to learn as much as possible about the needs of the potential client, while keeping it easy to use and understand for the user. We focused on transitioning questions from open ended questions to multiple choice or checkboxes - this lessens confusion from vague answers from potential clients and allows Inclusant to take action quicker because the potential clients’ needs are more immediately identified. The finalized questionnaire can be found on the Schedule a Consultation page on the new website. 
+
+              <br><br> Client intake form screenshots or list of questions<br><br>
+              <br><br> Finalized questionnaire screenshot or list of questions<br><br>
+
+
+              <u>New Website: Improved User Experience & Information Architecture</u><br>
+              The resulting outcomes from the development of a new website for Inclusant include user testing results, user requirements for the new site, a competitive analysis of other diversity & inclusion consulting firms, wireframes, documentation & style guide, and finally, a working Wordpress website. 
+              <br><br>
+              In the beginning, we spent time understanding the content and structure of the original Inclusant website through user testing. We created a user testing script to evaluate how easy to use the site was, and selected tasks that were important for potential clients to be able to perform intuitively. Examples of these tasks are registering for Inclusant’s main program Creating Confluence and scheduling a consultation. 
+              <br><br>
+              Using our testing script, we performed user tests to understand how people interacted with the original site. The main takeaways from the tests were:
+
+              <ul>
+                <li>Information was very difficult to find since there was a lot of information being thrown at the users, which made it very overwhelming. </li>
+                <li>Visually, there was not a lot of consistency across the pages. There were a lot of different colors and fonts, and the information was not organized in any intuitive way.</li>
+                <li>The navigation was difficult to use because Services & Resources were grouped together and the Programs button was not clickable even though it looked like it should be, so users couldn't find relevant information.</li>
+              </ul>
+
+              <br><br>
+              Compiling our user testing results, we created wireframes that reflected the cleaner, simpler interface we were going for. After in depth conversations with our community partner about the purpose and functionality of each page, we further simplified the website to only include the pages that added value to how Inclusant currently operates. The changes we made aimed to reduce the cognitive load on the users, establish credibility of the organization with consistent formatting, and improve the information flow to allow users and potential clients to easily find information they’re looking for and direct them to the Schedule a Consultation form. 
+
+              <br><br>
+              Screenshots of new and old site -- side by side comparison 
+              <br><br>
+
+            </p>
+
+            <p>
+              <b class="small-heading">Summary / Conclusion</b>
+              <br> 
+              After we finished developing the new site, we created Documentation & Style Guide to hand off to our community partner to support the sustainability for our solution. Overall, our project built capacity for Inclusant by allowing the organization to reallocate their time from matching potential clients to subcontractor consultants to directly working with clients on trainings and workshops. The technological capacity also increased because the new Wordpress website we built no longer relies on outdated Wordpress plugins, which is an obstacle we faced during the initial development process.   
+              <br><br>
+              edit that
+
             </p>
 
           </div>
@@ -106,7 +176,20 @@
           </div>
       </div>
 
-      <br><br><br><br><br><br>
+
+      <br><br><br><br>
+      
+      <div class="row">
+        <div class="col-2 back-to-work">
+          <a class="nav-link ml-auto" href="../work.html">back to all work</a>
+        </div>
+        <div class="col-8"></div>
+        <div class="col-2"></div>
+      </div>
+      
+    </div>
+
+    <br><br><br><br><br><br>
       <footer>
         <div class="row">
           <div class="col-10"></div>
@@ -115,8 +198,6 @@
           </div>
         </div>
       </footer>
-      
-    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

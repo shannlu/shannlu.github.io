@@ -8,13 +8,22 @@ body {
 .nav-link {
     display: inline-block;
     float: right;
-    /*font-family: 'Lora', serif;*/
-    /*font-family: 'Merriweather', serif;*/
-    /*font-family: 'PT Serif', serif;*/
     font-family: 'Karla', sans-serif;
 }
 
-.nav-item a{
+.navbar-light .navbar-nav .nav-item a{
+    display: inline-block;
+    text-align: center;
+    color: #767CA1;
+    font-size: 80%;
+}
+
+.navbar-light .navbar-nav .nav-item a:hover {
+    color: #000;
+    /*text-decoration: underline;*/
+}
+
+/*.nav-item a{
     display: inline-block;
     text-align: center;
     font-size: 80%;
@@ -24,13 +33,19 @@ body {
     color: #000;
     font-weight: bold;
 }
+*/
+.navbar-brand {
+    padding-top: 25%;
+}
 
 h1 {
     font-family: 'Karla', sans-serif;
+    color: #CE8898;
 }
 
 .small-heading {
     font-family: 'Karla', sans-serif;
+    color: #CE8898;
 }
 
 /* projects */
@@ -38,7 +53,13 @@ h1 {
     background-color: #000;
 }*/
 
+.back-to-work a{
+    color: #434b7e;
+}
 
+.back-to-work a:hover {
+    color: #767CA1;
+}
 
 /*color of links on hover & active, spacing between links and above*/
 
@@ -46,4 +67,3 @@ h1 {
 footer p {
     font-size: 80%;
 }
-
