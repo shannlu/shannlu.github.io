@@ -100,11 +100,29 @@
             <p>
               <b class="small-heading">Data</b>
               <br> 
-              The Sloan Digital Sky Survey's APOGEE experiment (Majewski et al. 2017) has collected multiple instances of high-resolution spectra for over 100,000 stars in the Milky Way. Each spectrum contains Doppler-shifted atomic lines; the magnitude of the shifts are proportional to the star's radial velocity. The dataset for this project, from SDSS Data Release 13, contains light curves (radial velocities as a function of time) for 75,276 stars, with the number of observations per star ranging from 2 to 28. The range of values for the radial velocities is -155 to 147 km/s, with an expected radial velocity error of approximately 0.1 km/s.<br>
+              The Sloan Digital Sky Survey's APOGEE experiment (Majewski et al. 2017) has collected multiple instances of high-resolution spectra for over 100,000 stars in the Milky Way. Each spectrum contains Doppler-shifted atomic lines; the magnitude of the shifts are proportional to the star's radial velocity. The dataset for this project, from SDSS Data Release 13, contains light curves (radial velocities as a function of time) for 75,276 stars, with the number of observations per star ranging from 2 to 28. The range of values for the radial velocities is -155 to 147 km/s, with an expected radial velocity error of approximately 0.1 km/s.<br><br>
 
               The following features were extracted from each light curve after its values were adjusted so as to have zero mean:
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                  <img src="../img/proj-imgs/apogee-1.png" draggable = "false" class="img-fluid">
+                </div>
+                <div class="col-1"></div>
+              </div>
 
-              <br> <br>table | graphs <br><br>
+              <br><br>
+              Examples of APOGEE light curves, depicted by plotting the radial velocity values over time:<br> 
+              <div class="row">
+                <div class="col-6">
+                  <img src="../img/proj-imgs/apogee-3.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>light curve for a single-star system</p>
+                </div>
+                <div class="col-6">
+                  <img src="../img/proj-imgs/apogee-4.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>light curve for a multiple-star system</p>
+                </div>
+              </div>
             </p>
 
 
@@ -115,26 +133,60 @@
               <br>
               <u>Unsupervised Learning</u><br>
               We apply K-means clustering to the extracted features in order to see whether we can visually identify the populations of multiple-star and single-star systems. We assume two clusters because there are two populations of interest. 
-              <br><br> graphs <br><br>
+              
+              <div class="row">
+                <div class="col-6">
+                  <img src="../img/proj-imgs/apogee-5.png" draggable = "false" class="img-fluid">
+                </div>
+                <div class="col-6">
+                  <img src="../img/proj-imgs/apogee-6.png" draggable = "false" class="img-fluid">
+                </div>
+              </div>
 
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                  <p class="text-center" style="font-size: 75%;"><br>examples of results from a K-means clustering analysis, assuming two clusters</p>
+                </div>
+                <div class="col-1"></div>
+              </div>
+              <br>
               In the figure above, we observe how the population of statistics stretches continuously from the regime of single-star systems (values near zero) to the regime of multiple-star systems (values far from zero). However, there is no easy way to draw a boundary between the two populations. This is not surprising because multiple-star systems can rotate perpendicularly to the line of sight and thus look like a single star because the radial velocities are measured with respect to the Earth and may not be changing. There is an overlap between the two populations of stellar systems, so we cannot cleanly separate them. 
 
-              <br><br>
+              <br><br><br>
               <u>Supervised Learning</u> <br>
               Here we address the question of whether, given a labeled dataset, commonly used machine learning algorithms would be helpful in classifying star systems. To generate labeled data, we use Python-based simulation software created by Carles Badenes (Pitt), Eric Alpert (CMU), and Peter Freeman. Without loss of generality, we assume that for these labeled data, the fraction of multiple-star systems is 0.5
+              <br><br>
 
-              <br><br> table <br><br>
+              <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                  <img src="../img/proj-imgs/apogee-7.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 65%;"><br>Because the SVM algorithm runs slowly compared to random forest and neural networks, we estimate the SVM misclassification rates using a random subsample of 2000 stars (985 for training and 1015 for testing).</p>
 
+                </div>
+                <div class="col-3"></div>
+              </div>
+              <br>
               We see that supervised learning algorithms can classify multiple-star systems relatively well. Compared to the trivial misclassification rate of 50%, the random forest classifier performs better with a misclassification rate of 13.6%. However, the classifiers can never be perfect because of the fact that radial velocities of some multiple-star systems will be similar to those of single stars because their stars move (nearly) perpendicularly to our line of sight. 
 
               Looking at the results from random forest, we see that the median, range, and standard deviation are the most important features in classifying the stars as single entities or multiple-star systems. Range and standard deviation are highly correlated, so it is not surprising that their importances are similar.
 
-              <br><br> graph <br><br>
+              <br><br> 
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                  <img src="../img/proj-imgs/apogee-8.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>feature importances, as determined by random forest</p>
+                </div>
+                <div class="col-1"></div>
+              </div>
 
+              <br><br><br>
               <b class="small-heading">Conclusions</b><br>
               Given radial velocity data for 75,276 stars, we extracted features and performed both supervised and unsupervised learning analyses in order to try to classify stellar systems as single stars or multiple-star systems. Using unsupervised learning methods, we find that it is difficult to classify the stars into two distinct populations. With supervised learning, in a simulation where the proportion of multiple-star systems is known, we see that the machine learning algorithms are able to separate the data, however, there is still a misclassification rate of about 15% using these methods. 
 
-              <br><br>
+              <br><br><br><br>
               <b class="small-heading">References</b><br>
               Majewski S. R., et al. 2017, The Astronomical Journal, vol. 154, p. 94<br>
               James, G., et al. 2013, An Introduction to Statistical Learning, Springer<br>

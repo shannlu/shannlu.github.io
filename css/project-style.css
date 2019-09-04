@@ -61,7 +61,23 @@ h1 {
     color: #767CA1;
 }
 
-/*color of links on hover & active, spacing between links and above*/
+.small-heading img {
+  width: 80%;
+  display: inline-block;
+  height: auto;
+
+}
+
+.purple-link {
+    color: #434b7e;
+    display: inline;
+}
+
+.purple-link:hover {
+    color: #767CA1;
+    text-decoration: none;
+}
+
 
 /* footer */
 footer p {

@@ -78,8 +78,8 @@
               To create a fully-functioning chess camp registration site from scratch - taking into account necessary functions for different roles, an intuitive user experience, and a live database. 
               <br><br>
               The process involved understanding all application requirements, designing and building out the database, developing the application using an MVC model, and user testing to ensure that all functionality worked as expected. 
-              <br><br>
-              purpose to learn the software development process for web applications
+              <br>
+              
           </p>
         </div>
       </div>
@@ -95,44 +95,79 @@
             <p>
               <b class="small-heading">Understanding application requirements & creating the database -</b>
               <br> 
-              In order to begin, I first had to understand what the registration site would be used for and how it should function. At a high level, all users would be able to browse different chess camps offered, curriculums for the camps, locations the camps were held at, and instructors. Parents would be able to create an account and log in, add students to their family, select camps to register for, and check out. Instructors would be able to modify curriculum and course information, while guests would only be able to view public information. A detailed list of use cases for different types of users can be found here. 
+              In order to begin, I first had to understand what the registration site would be used for and how it should function. At a high level, all users would be able to browse different chess camps offered, curriculums for the camps, locations the camps were held at, and instructors. Parents would be able to create an account and log in, add students to their family, select camps to register for, and check out. Instructors would be able to modify curriculum and course information, while guests would only be able to view public information. A detailed list of use cases for different types of users can be found <a href="../proj-files/am_use_cases.pdf" target="_blank" class="purple-link">here</a>. 
               <br><br>
               From the use cases, I had to determine what pieces of information were necessary to keep track of and how the pieces related to each other. Throughout the process of doing so, I created an entity-relationship diagram to represent the database structure.
               <br><br>
-              ERD
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                  <img src="../img/proj-imgs/am-1.png" draggable = "false" class="img-fluid">
+                </div>
+                <div class="col-1"></div>
+                
+              </div>
               <br><br>
-              Additional documentation: database design in third normal form & data dictionary
+              Additional documentation:  <a href="../proj-files/am_db_design.pdf" target="_blank" class="purple-link">database design in third normal form</a> & <a href="../proj-files/am_data_dictionary.pdf" target="_blank" class="purple-link">data dictionary</a>
               <br><br>
+
               Having a comprehensive understanding of what information was stored in the database and how the information was organized played an integral part in building the rest of the application because it ensured that the correct information could be accessed efficiently. 
             </p>
-            <br>
+            <br><br>
 
             <p>
               <b class="small-heading">Developing the application -</b>
               <br> 
-             Using a Model-View-Controller (MVC) framework, I built the application using Ruby on Rails in phases that corresponded to these separate parts. 
-             <br><br>
-            [diagram this maybe]
-            First, on the backend, the database entities were built out as models, with a full suite of unit tests to make sure that the data stored within each model was accurate and feasible (ie. phone numbers could only be 10 digits). 
-            <br><br>
-            Then, some basic views were created to display information about the models - the pages that allow users to browse different camps, locations, instructors, and curriculums. Utilizing HTML, CSS, and Materialize, basic styling was included to appropriately visualize the information. 
-            <br><br>
-            Afterwards, basic controller functionality was implemented, including the CRUD (create, read, update, delete) operations for all the entities. This allowed the users to update information about a model in the database. 
-            <br><br>
-            After functionality for viewing and editing camps, curriculums, locations, and instructors were completed, the rest of the models (users, registrations, students, camp instructors) were created. 
-            <br><br>
-            Following a similar process as before, the views and controllers for the new models were implemented. This included creating the process for more complex tasks - such as making an account, logging in, registering a student for a camp, making a payment / checking out, and assigning instructors to different camps. 
-            <br><br>
-            Once all user functions were feasible, I added authorization for different types of accounts. Admin accounts were able to view and edit information on all pages, instructor accounts could only change information for camps and curriculums they were assigned to, and parent accounts could only view information.
-            <br><br>
-            Lastly, user testing was conducted to make the end-to-end process as intuitive as possible. Changes to the structure and interactions were made based on user feedback. 
+             Using a Model-View-Controller (MVC) framework, I built the application using Ruby on Rails in phases that corresponded to those separate parts. A high-level overview of the steps I took to develop this web application is as follows: 
+             <br>
+
+             <ol>
+              <li>
+                On the backend, the database entities were built out as models, with a full suite of unit tests to make sure that the data stored within each model was accurate and feasible (ie. phone numbers could only be 10 digits). 
+              </li>
+              <br>
+              <li>
+                Basic views were created to display information about the models - the pages that allow users to browse different camps, locations, instructors, and curriculums. Utilizing HTML, CSS, and Materialize, basic styling was included to appropriately visualize the information. 
+              </li>
+              <br>
+              <li>
+                Basic controller functionality was implemented, including the CRUD (create, read, update, delete) operations for all the entities. This allowed the users to update information about a model in the database. 
+              </li>
+              <br>
+              <li>
+                After functionality for viewing and editing camps, curriculums, locations, and instructors were completed, the rest of the models (users, registrations, students, camp instructors) were created. 
+              </li>
+              <br>
+              <li>
+                Following a similar process as before, the views and controllers for the new models were implemented. This included creating the process for more complex tasks - such as making an account, logging in, registering a student for a camp, making a payment / checking out, and assigning instructors to different camps. 
+              </li>
+              <br>
+              <li>
+                Once all user functions were feasible, I added authorization for different types of accounts. Admin accounts were able to view and edit information on all pages, instructor accounts could only change information for camps and curriculums they were assigned to, and parent accounts could only view information.
+              </li>
+              <br>
+              <li>
+                User testing was conducted to make the end-to-end process as intuitive as possible. Changes to the structure and interactions were made based on user feedback. 
+              </li>
+             </ol>
+            
             </p>
-            <br>
+            <br><br>
 
             <p>
-              <b class="small-heading">Final solution -</b>
+              <b class="small-heading">Final product -</b>
               <br> 
-              Some screenshots of the final product are shown below, and the complete GitHub repository for this project can be found here. 
+              Some screenshots of the final product are shown below, and the complete GitHub repository for this project can be found here. The purpose of this project was to understand the end-to-end process for developing a web application - from understanding system requirements, to designing database structure, to implementation and streamlining user experience. This was my first web application. 
+              <br><br>
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                  <img src="../img/proj-imgs/am-2.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>landing page</p>
+                </div>
+                <div class="col-1"></div>
+              </div>
+              <!-- <img src="../img/proj-imgs/am-2.png" draggable = "false" class="img-fluid"> -->
             </p>
             <br>
 
@@ -143,8 +178,22 @@
           </div>
       </div>
 
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-5">
+          <img src="../img/proj-imgs/am-4.png" draggable = "false" class="img-fluid">
+          <p class="text-center" style="font-size: 75%;"><br>login page</p>
+        </div>
 
-      <br><br><br><br>
+        <div class="col-5">
+          <img src="../img/proj-imgs/am-3.png" draggable = "false" class="img-fluid">
+          <p class="text-center" style="font-size: 75%;"><br>locations page</p>
+        </div>
+        <div class="col-1"></div>
+      </div>
+
+
+      <br><br><br>
       
       <div class="row">
         <div class="col-2 back-to-work">
@@ -156,7 +205,7 @@
       
     </div>
 
-    <br><br><br><br><br><br>
+    <br><br><br><br><br>
       <footer>
         <div class="row">
           <div class="col-10"></div>
