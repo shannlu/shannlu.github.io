@@ -18,7 +18,7 @@
     <div class="container-fluid">
       <nav class="navbar navbar-light navbar-expand-md">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html"><img src = "../img/logo.png" width = "45" height = "auto"></a>
+          <a class="navbar-brand" href="../index.html"><img src = "../img/logo.png" width = "45" height = "auto"></a>
           <!-- <a class="navbar-brand" href="../index.html">shannon lu</a> -->
         </div>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,7 @@
       <h1>APOGEE Radial Velocity Data Research </h1>
       
       <div class="row">
-        <div class="col-8">
+        <div class="col-lg-8">
           <p><i>
           An analysis of the proportion of multiple-star systems using APOGEE radial velocity data from the Sloan Digital Sky Survey, utilizing both supervised and unsupervised learning methods</i></p>
         </div>
@@ -60,7 +60,7 @@
 
 
       <div class="row background-col">
-        <div class="col-3">
+        <div class="col-sm-3">
           <p>
             <b class="small-heading">RECOGNITION</b> <br>
             Early Research Award at Meeting of the Minds, Carnegie Mellon University’s annual Research Symposium <br><br>
@@ -76,12 +76,12 @@
         <div class="col-1">
         </div>
 
-        <div class="col-8">
+        <div class="col-lg-8">
           <p>
-              <b class="small-heading">Introduction (A Little Background)</b><br>
+              <b class="small-heading">Background</b><br>
               In the Milky Way galaxy, stars exist either in isolation or as part of a multiple-star system. The true proportion of stellar systems that contain multiple stars is unknown. However, the APOGEE data from the Sloan Digital Sky Survey provides information on radial velocities, or velocities relative to the Earth, for over 100,000 stars, which we can use to attempt to predict whether a given star exists on its own or as part of a system. The radial velocities are useful because they can indicate whether or not a star wobbles back and forth relative to the system’s overall center of mass, and typically the brightest star in a multiple-star system may be seen to wobble, whereas there is no wobble for a single star. 
             <br><br>
-              <b class="small-heading">Research Questions / Problems of Interest</b><br>
+              <b class="small-heading">Research Questions</b><br>
               1) Using methods of unsupervised learning, can we identify the populations of single and multiple-star systems? <br>
               2) If someday we acquired data with known single and multiple-star systems, how well would machine learning algorithms perform in classifying the data?  
 
@@ -96,7 +96,7 @@
           <div class="col-2">
           </div>
 
-          <div class="col-8">
+          <div class="col-lg-8">
             <p>
               <b class="small-heading">Data</b>
               <br> 
@@ -105,7 +105,7 @@
               The following features were extracted from each light curve after its values were adjusted so as to have zero mean:
               <div class="row">
                 <div class="col-1"></div>
-                <div class="col-10">
+                <div class="col-lg-10">
                   <img src="../img/proj-imgs/apogee-1.png" draggable = "false" class="img-fluid">
                 </div>
                 <div class="col-1"></div>
@@ -114,11 +114,11 @@
               <br><br>
               Examples of APOGEE light curves, depicted by plotting the radial velocity values over time:<br> 
               <div class="row">
-                <div class="col-6">
+                <div class="col-md-6">
                   <img src="../img/proj-imgs/apogee-3.png" draggable = "false" class="img-fluid">
                   <p class="text-center" style="font-size: 75%;"><br>light curve for a single-star system</p>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                   <img src="../img/proj-imgs/apogee-4.png" draggable = "false" class="img-fluid">
                   <p class="text-center" style="font-size: 75%;"><br>light curve for a multiple-star system</p>
                 </div>
@@ -135,17 +135,17 @@
               We apply K-means clustering to the extracted features in order to see whether we can visually identify the populations of multiple-star and single-star systems. We assume two clusters because there are two populations of interest. 
               
               <div class="row">
-                <div class="col-6">
+                <div class="col-md-6">
                   <img src="../img/proj-imgs/apogee-5.png" draggable = "false" class="img-fluid">
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                   <img src="../img/proj-imgs/apogee-6.png" draggable = "false" class="img-fluid">
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-1"></div>
-                <div class="col-10">
+                <div class="col-lg-10">
                   <p class="text-center" style="font-size: 75%;"><br>examples of results from a K-means clustering analysis, assuming two clusters</p>
                 </div>
                 <div class="col-1"></div>
@@ -160,7 +160,7 @@
 
               <div class="row">
                 <div class="col-3"></div>
-                <div class="col-6">
+                <div class="col-md-6">
                   <img src="../img/proj-imgs/apogee-7.png" draggable = "false" class="img-fluid">
                   <p class="text-center" style="font-size: 65%;"><br>Because the SVM algorithm runs slowly compared to random forest and neural networks, we estimate the SVM misclassification rates using a random subsample of 2000 stars (985 for training and 1015 for testing).</p>
 
@@ -175,7 +175,7 @@
               <br><br> 
               <div class="row">
                 <div class="col-1"></div>
-                <div class="col-10">
+                <div class="col-lg-10">
                   <img src="../img/proj-imgs/apogee-8.png" draggable = "false" class="img-fluid">
                   <p class="text-center" style="font-size: 75%;"><br>feature importances, as determined by random forest</p>
                 </div>
@@ -185,6 +185,8 @@
               <br><br><br>
               <b class="small-heading">Conclusions</b><br>
               Given radial velocity data for 75,276 stars, we extracted features and performed both supervised and unsupervised learning analyses in order to try to classify stellar systems as single stars or multiple-star systems. Using unsupervised learning methods, we find that it is difficult to classify the stars into two distinct populations. With supervised learning, in a simulation where the proportion of multiple-star systems is known, we see that the machine learning algorithms are able to separate the data, however, there is still a misclassification rate of about 15% using these methods. 
+              <br><br>
+              The purpose of this project was to practice applying concepts learned in class to real-world data and drawing meaningful conclusions. This was my first semester conducting Statistics research, and this project won the Early Research Award at Meeting of the Minds, Carnegie Mellon University's annual Research Symposium.
 
               <br><br><br><br>
               <b class="small-heading">References</b><br>
@@ -198,26 +200,30 @@
           <div class="col-2">
           </div>
       </div>
-
-      <br><br><br><br>
-
-      <div class="row">
-        <div class="col-2 back-to-work">
-          <a class="nav-link ml-auto" href="../work.html">back to all work</a>
-        </div>
-        <div class="col-8"></div>
-        <div class="col-2"></div>
-      </div>
-      
     </div>
 
+    <div class="row text-center">
+      <div class="col-4"></div>
+      <div class="col-md-4 back-to-work">
+         <a class="nav-link ml-auto" href="../work.html">- back to all work -</a>
+      </div>
+      <div class="col-4"></div>
+       
+        <!-- <div class="col-2">
+          
+        </div> -->
+        <!-- <div class="col-10"></div> -->
+        <!-- <div class="col-12 back-to-work">
+          <a class="nav-link ml-auto" href="../work.html">back to all work</a>
+        </div> -->
+    </div>
+      
 
-    <br><br><br><br><br><br>
       <footer>
         <div class="row">
           <div class="col-10"></div>
-          <div class="col-2">
-            <p>&copy shannon lu 2019</p>
+          <div class="col-sm-2">
+            <p><span class="highlight">&copy shannon lu 2019</span></p>
           </div>
         </div>
       </footer>

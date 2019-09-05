@@ -208,6 +208,31 @@ footer p {
     margin:0 auto;
 }
 
+.travel-txt {
+    margin-top: -5%;
+    margin-left: -2%;
+}
+
+.purple-link {
+    color: #434b7e;
+    display: inline;
+}
+
+.purple-link:hover {
+    color: #767CA1;
+    text-decoration: none;
+}
+
+.highlight-pink {
+    background-color: #FBD6DF;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
+
 
 
 /* work */
@@ -302,6 +327,75 @@ footer p {
 
 
 
+
+/* media queries */
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .elem-2 {
+        background-image: none;
+    }
+    .elem-3 {
+        background-image: none;
+    }
+    .elem-4 {
+        background-image: none;
+    }
+    .elem-5 {
+        background-image: none;
+    }
+    .desc-text-part {
+        margin-top: 15%;
+        margin-bottom: 0;
+    }
+
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+    .elem-2 {
+        background-image: none;
+    }
+    .elem-3 {
+        background-image: none;
+    }
+    .elem-4 {
+        background-image: none;
+    }
+    .elem-5 {
+        background-image: none;
+    }
+    .desc-text-part {
+        margin-top: 15%;
+        margin-bottom: 0;
+    }
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+    .elem-2 {
+        background-image: none;
+    }
+    .elem-3 {
+        background-image: none;
+    }
+    .elem-4 {
+        background-image: none;
+    }
+    .elem-5 {
+        background-image: none;
+    }
+    .desc-text-part {
+        margin-top: 15%;
+        margin-bottom: 0;
+    }
+
+}
 
 
 

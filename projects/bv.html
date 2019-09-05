@@ -18,7 +18,7 @@
     <div class="container-fluid">
       <nav class="navbar navbar-light navbar-expand-md">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html"><img src = "../img/logo.png" width = "45" height = "auto"></a>
+          <a class="navbar-brand" href="../index.html"><img src = "../img/logo.png" width = "45" height = "auto"></a>
           <!-- <a class="navbar-brand" href="../index.html">shannon lu</a> -->
         </div>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,7 @@
       <h1>Black & Veatch Incident Data Research</h1>
 
       <div class="row">
-        <div class="col-8">
+        <div class="col-lg-8">
           <p><i>
           An analytics dashboard for Black & Veatch to understand historical data on recorded injuries and incidents, with prediction models to forecast for future projects</i></p>
         </div>
@@ -60,29 +60,36 @@
 
 
       <div class="row background-col">
-        <div class="col-3">
+        <div class="col-sm-3">
           <p>
             <b class="small-heading">RECOGNITION</b> <br>
-            Third Place in Statistics at Meeting of the Minds, Carnegie Mellon University’s annual Research Symposium <br><br>
+            Third Place in Statistics at Meeting of the Minds, Carnegie Mellon's annual Research Symposium <br><br>
             <b class="small-heading">LANGUANGE / SYSTEM</b> <br>
             R, Python, Flask, HTML, CSS, JavaScript <br><br>
             <b class="small-heading">TERM</b> <br>
             Fall 2019 <br><br>
             <b class="small-heading">TEAM</b> <br> 
-            Shreya Prakash, Irina Javed, Adin Adler, Rebecca Nugent (Advisor), Ben (Advisor), Pef (Advisor)
+            Shreya P., Irina J., Adin A.<br><br>
+            <b class="small-heading">MENTORS</b> <br> 
+            Rebecca Nugent, Ben , Professor Freeman
           </p>
         </div>
 
         <div class="col-1">
         </div>
 
-        <div class="col-8">
+        <div class="col-lg-8">
           <p>
               <b class="small-heading">Introduction </b><br>
-              TEXT
+              In the fall of 2018, Black & Veatch began a working relationship with Carnegie Mellon University’s Department of Statistics to help push forward an initiative to utilize data analytics and statistics to improve their business. Black & Veatch is a global engineering, procurement and construction services firm, specializing in energy, water and telecommunications. Within these industries, workplace incidents and injuries come with the job. Black & Veatch’s overarching goal is to minimize the number of injuries that occur during their projects, and understand trends that can help create a more proactive method for injury prevention. 
+
             <br><br>
-              <b class="small-heading">Research Questions </b><br>
-              TEXT
+              <b class="small-heading">Project Overview</b><br>
+              Our team tackled this challenge by first analyzing historical data on incidents and injuries, and creating the infrastructure to build appropriate datasets that would help contextualize the occurrences. We then decided to create an intuitive and accessible method for them to see the data analyses we had been creating, so we built a web application so users can subset the data, create visualizations, and run our models.  
+
+            <br><br>
+              
+              This project served as a proof-of-concept for larger investment in the partnership between CMU Statistics and Black & Veatch. Due to non-disclosure agreement restrictions, the following is only a high level overview of the project process.  
 
           </p>
         </div>
@@ -95,11 +102,65 @@
           <div class="col-2">
           </div>
 
-          <div class="col-8">
+          <div class="col-lg-8">
             <p>
-              <b class="small-heading">Heading</b>
+              <b class="small-heading">Collecting and merging the data</b>
               <br> 
-             text
+             Black & Veatch houses their data on incidents and injuries through a third-party safety management software. Incidents are recorded manually and employees are encouraged to report every incident - from a minor laceration to a broken bone. The way that the data is stored separates information about projects (such as number of workers on a project, location, business line, year, etc.) from the incident data. 
+             <br><br>
+
+             While we could download the information about incidents directly from the software, we had to scrape the data regarding projects and monthly statistics. We did this by collecting cookie information from the third-party website and using the python package selenium to write a script. 
+
+             <br><br>
+             Once we had collected the relevant data, we merged the three datasets into two as diagrammed below. The monthly statistics and project information provided context into how many projects were being worked on, how many hours were going into each project, and how many employees were assigned to each project. This allowed us to calculate incident rates for different projects and time periods.
+
+             <br><br>
+             <div class="row">
+                <div class="col-1"></div>
+                <div class="col-lg-10">
+                  <img src="../img/proj-imgs/bv-1.png" draggable = "false" class="img-fluid">
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </p>
+
+            <br><br><br>
+            <p>
+              <b class="small-heading">Web application interface</b>
+              <br> 
+              Since we decided that we wanted to create a tool for Black & Veatch that would allow them to visualize analyses for different datasets, we created a web application using Flask, a Python web framework. The interface allows for interactive data filtering options, gives exploratory data analysis for filtered data, and predicts injury type and injury rates for filtered criteria. 
+             <br><br>
+
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-lg-10">
+                  <img src="../img/proj-imgs/bv-2.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>the graphs on the right included visualizations of hours worked per project, workers per project, incidents by type, incidents per month, and frequency of key words text analysis </p>
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </p>
+
+            <br><br><br>
+            <p>
+              <b class="small-heading">Models and experiments</b>
+              <br> 
+              After experimenting around with different models we could use to predict future incident rates and types, we decided to use XGBoost. We created two different models - one for predicting the number of injuries per hour per month, and one for the three most likely injury types, assuming that an incident would occur. 
+             <br><br>
+
+              The decision to predict these two outcomes was influenced by the fact that the incident and injury occurrence rates were so low compared to the number of hours and projects worked. Because of this, we had to predict injuries per hour rather than for a larger time period, and what type of injury it would be if one were to happen. 
+              <br><br>
+              In addition to showing the predicted values, we visualized the results using a partial dependence plot, which shows the marginal effect of a feature on a predicted outcome.  
+            </p>
+
+            <br><br><br>
+
+            <p>
+              <b class="small-heading">Conclusion and future work </b>
+              <br> 
+              Our final product is a platform where Black & Veatch can input specifications for a new project and display trends for similar projects completed in the past, as well as run the models to predict incident rate and incident types. The web application interface includes exploratory data analysis performed on a filtered subset, as well as our models to predict the number of incidents per hour per month and the three most likely incident types if an incident were to occur.              
+              <br><br>
+              We presented our semester’s work to Black & Veatch employees, and they recognized the value of utilizing a data-driven platform to drive decision making on injury prevention programs. They decided to continue their partnership with the Statistics Department at CMU and invested more into the furthering of our work. 
             </p>
 
           </div>
@@ -108,25 +169,21 @@
           </div>
       </div>
 
-
-      <br><br><br><br>
-      
-      <div class="row">
-        <div class="col-2 back-to-work">
-          <a class="nav-link ml-auto" href="../work.html">back to all work</a>
-        </div>
-        <div class="col-8"></div>
-        <div class="col-2"></div>
-      </div>
-
     </div>
 
-    <br><br><br><br><br><br>
+    <div class="row text-center">
+        <div class="col-4"></div>
+        <div class="col-md-4 back-to-work">
+           <a class="nav-link ml-auto" href="../work.html">- back to all work -</a>
+        </div>
+        <div class="col-4"></div>
+      </div>
+
       <footer>
         <div class="row">
           <div class="col-10"></div>
-          <div class="col-2">
-            <p>&copy shannon lu 2019</p>
+          <div class="col-sm-2">
+            <p><span class="highlight">&copy shannon lu 2019</span></p>
           </div>
         </div>
       </footer>

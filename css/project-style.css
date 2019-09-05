@@ -78,8 +78,35 @@ h1 {
     text-decoration: none;
 }
 
+.back-to-work {
+    /*margin: 5% auto;*/
+    margin-top: 5%;
+    margin-left: -10%;
+}
 
 /* footer */
+
+footer {
+    margin-top: 10%;
+}
+
 footer p {
     font-size: 80%;
 }
+
+.highlight {
+    background-color: #ffefb9;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.highlight-blue {
+    background-color: #a6d1ea;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
